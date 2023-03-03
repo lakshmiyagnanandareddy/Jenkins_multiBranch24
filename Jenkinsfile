@@ -1,4 +1,4 @@
-node('master') 
+node('slave2') 
 {
     stage('Continuous Download_loans') 
 	{
@@ -6,7 +6,7 @@ node('master')
 	}
     stage('Continuous Build_loans') 
 	{
-    sh label: '', script: 'mvn package'
+    sh 'mvn package'
 	}
     
 }
